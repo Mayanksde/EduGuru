@@ -1,0 +1,182 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(8, 0, 25);
+  overflow: auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.random-content {
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+}
+
+.random-content h2,
+.about h3 {
+  font-size: 2.1rem;
+  color: #eff7ff;
+}
+
+.random-content p,
+.about p {
+  font-size: 1.2em;
+  color: #e7f3ff;
+  line-height: 1.5;
+}
+
+.optionBtn {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.optionBtn button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.1em;
+  color: white;
+  background-color: rgb(17, 0, 64);
+  border: none;
+  border-bottom: 1px solid rgb(248, 245, 255);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.optionBtn button:hover {
+  background-color: rgb(30, 2, 92);
+}
+
+.design-element {
+  width: 100%;
+
+  margin: 40px 0;
+  border-radius: 15px;
+}
+
+.boxes {
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.box1,
+.box2 {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.box1 {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  width: fit-content;
+}
+
+.box2 {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  width: 50%;
+}
+
+.box1 pre {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.typedText {
+  color: #61dafb;
+}
+
+.button-continue {
+  background-color: #f4c542;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-learn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.about {
+  margin-top: 4rem;
+}
+
+@media ((min-width: 351px) and (max-width:576px)) {
+
+  .optionBtn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .optionBtn button {
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .random-content {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .random-content h2,
+  .about h3 {
+    font-size: 1.8rem;
+    color: #eff7ff;
+  }
+
+  .random-content p,
+  .about p {
+    font-size: 1em;
+    color: #e7f3ff;
+    line-height: 1.5;
+  }
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+
+  .box1,
+  .box2 {
+    padding: 10px;
+    margin: 50px;
+    border-radius: 7px;
+  }
+}

@@ -1,0 +1,59 @@
+/* homeInstructor_style.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.formBody {
+    /* width: 100%; */
+    /* max-width: 600px; */
+    padding: 30px;
+    border: 5px solid black;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 150px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.question {
+    display: none;
+    width: 100%;
+}
+
+#firstq {
+    display: block;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #053263;
+    color: white;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00274d;
+}
+
+label {
+    font-size: 50px;
+    margin: 10px 0;
+}
