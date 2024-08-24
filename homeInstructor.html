@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="css_files/homeInstructor_style.css"> -->
+    <link rel="stylesheet" href="css_files/navbar_style.css">
+</head>
+
+<style>
+    
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.formBody {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 6rem;
+    /* border: 5px solid black; */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 150px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.question {
+    display: none;
+    width: 100%;
+}
+
+#firstq {
+    display: block;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #053263;
+    color: white;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00274d;
+}
+
+.question p, label {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>EduGuru</h1>
+            </div>
+            <div class="navbar-middle">
+                <a href="index.php">Home</a>
+                <a href="#">Moments</a>
+                <a href="#">Notifications</a>
+                <a href="#">Messages</a>
+            </div>
+            <div class="navbar-right">
+                <a href="profile.php">Profile</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="formBody">
+        <form action="homeInstructor.php" method="post">
+            <div id="firstq" class="question">
+                <p>1: What kind of teaching have you done before?</p>
+                <label><input type="radio" name="question1" value="Option 1"> Informally</label><br>
+                <label><input type="radio" name="question1" value="Option 2"> Professionally</label><br>
+                <label><input type="radio" name="question1" value="Option 3"> Online</label><br>
+                <label><input type="radio" name="question1" value="Option 4"> Other</label><br>
+                <button type="button" onclick="validateAndDisplay('firstq', 'secondq', '#e3f2fd')">Next</button>
+            </div>
+
+            <div id="secondq" class="question">
+                <p>2: How much of a video “pro” are you?</p>
+                <label><input type="radio" name="question2" value="Option 1"> Beginner</label><br>
+                <label><input type="radio" name="question2" value="Option 2"> Intermediate</label><br>
+                <label><input type="radio" name="question2" value="Option 3"> Experienced</label><br>
+                <button type="button" onclick="validateAndDisplay('secondq', 'thirdq', '#ffebee')">Next</button>
+            </div>
+
+            <div id="thirdq" class="question">
+                <p>3: Do you have an audience to share your course with?</p>
+                <label><input type="radio" name="question3" value="Option 1"> Yes</label><br>
+                <label><input type="radio" name="question3" value="Option 2"> No</label><br>
+                <label><input type="radio" name="question3" value="Option 3"> Few</label><br>
+                <button type="submit" onclick="changeBackgroundColor('#fff3e0')">Finish</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateAndDisplay(currentFormId, nextFormId, color) {
+            const currentForm = document.getElementById(currentFormId);
+            const options = currentForm.querySelectorAll('input[type="radio"]');
+            let selected = false;
+
+            options.forEach(option => {
+                if (option.checked) {
+                    selected = true;
+                }
+            });
+
+            if (!selected) {
+                alert("Please select an option before proceeding.");
+            } else {
+                displayq(currentFormId, nextFormId, color);
+            }
+        }
+
+        function displayq(currentFormId, nextFormId, color) {
+            document.getElementById(currentFormId).style.display = "none";
+            document.getElementById(nextFormId).style.display = "block";
+            document.body.style.backgroundColor = color;
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
